@@ -39,9 +39,9 @@
                         var Last = "";
                         var Relation = "";
 
-                        var selectedIndex = document.getElementById("PetSel").value;
+                        var selectedIndex = document.getElementById("PetSel").value - 1;
                         if(selectedIndex > 0 && selectedIndex < jsonObj.pets.length){
-                            var pet = jsonObj.pets[i];
+                            var pet = jsonObj.pets[selectedIndex];
                             First = pet.name;
                             Last = pet.lname;
                         }
@@ -144,7 +144,7 @@
                     // Javascript function JSON.parse to parse JSON data
                     var jsonObj = JSON.parse(http_request.responseText);
                     var text = "<option value='0'>--</option>";
-                    for (var i = 0; i < jsonObj.pets.length; i++) {
+                    for (var i = 1; i < jsonObj.pets.length + 1; i++) {
                        text = text + "<option value = '" + i + "'>" + jsonObj.pets[i].name + " " + jsonObj.pets.[i].lname + "</option>";
                     }
                     document.getElementById("PetSel").innerHTML = text;
