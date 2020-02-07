@@ -77,6 +77,7 @@ function wrtJSON() {
             var pets = jsonObj.pets
 
             var itemsInList = "<tr><th>First Name</th><th>Last Name</th><th>Relation</th></tr>";
+
             for(var i = 0; i< pets.length; i++){
 
               if(true){//has name add
@@ -89,7 +90,7 @@ function wrtJSON() {
 
 
             }
-            document.getElementById("Searchable").innerHTML = "<td>1</td><td>2</td><td>3</td>"
+            document.getElementById("Searchable").innerHTML = itemsInList + "<td>1</td><td>2</td><td>3</td>"
         }
     }
     http_request.open("GET", data_file, true);
