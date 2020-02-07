@@ -98,7 +98,7 @@ function wrtJSON() {
 
 
             }
-            document.getElementById("Searchable").innerHTML = itemsInList + "<td>1</td><td>2</td><td>3</td>"
+            document.getElementById("Searchable").innerHTML = itemsInList;
         }
     }
     http_request.open("GET", data_file, true);
@@ -106,7 +106,7 @@ function wrtJSON() {
 }
 
 function contentForEntry(pet){
-
+    return "<tr><td>"+ pet.name+ "</td><td>"+pet.lname+"</td><td>"+pet.relation+"</td></tr>";
 }
 
 ///_________---------------------------------------------------------------------
