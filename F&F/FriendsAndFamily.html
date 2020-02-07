@@ -145,8 +145,10 @@
                     // Javascript function JSON.parse to parse JSON data
                     var jsonObj = JSON.parse(http_request.responseText);
                     var text = "<option value='0'>--</option>";
-                    for (var i = 1; i < jsonObj.pets.length + 1; i++) {
-                       text = text + "<option value = '" + i + "'>" + jsonObj.pets[i].name + " " + jsonObj.pets[i].lname + "</option>";
+                    var pets = jsonObj.pets;
+                    for (var i = 0; i < pets.length ; i++) {
+                        var valueIndex = i + 1
+                       text = text + "<option value = '" + valueIndex + "'>" + pets[i].name + " " + pets[i].lname + "</option>";
                     }
                     document.getElementById("PetSel").innerHTML = text;
                 }
