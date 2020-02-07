@@ -39,6 +39,13 @@
                         var Last = "";
                         var Relation = "";
 
+                        var selectedIndex = document.getElementById("PetSel").value;
+                        if(selectedIndex > 0 && selectedIndex < jsonObj.pets.length){
+                            var pet = jsonObj.pets[i];
+                            First = pet.name;
+                            Last = pet.lname;
+                        }
+
                         document.getElementById("First Name").innerHTML = First;
                         document.getElementById("Last Name").innerHTML = Last;
                     }
@@ -46,7 +53,7 @@
                 http_request.open("GET", data_file, true);
                 http_request.send();
             }
-            //for the write in element
+            //for the write in element yep, did't copy paste this at all
             function wrtJSON() {
 
                 var data_file = "FriendsAndFamily.json";
@@ -87,7 +94,7 @@
     </head>
     <body>
         <h1>Fluffies, Fuzzies, Fur Buddies, and a Fish</h1>
-        <div class="central">Select a pet:
+        <div >Select a pet:
             <select id='PetSel' onchange ="drpJSON()">
 
             </select>
@@ -96,7 +103,7 @@
             <input type="button" onclick="wrtJSON()" value="Pick">
         </div>
         <br>
-        <table class="src" >
+        <table>
             <tr>
                 <th>First Name</th>
                 <th>Last Name</th>
@@ -138,7 +145,7 @@
                     var jsonObj = JSON.parse(http_request.responseText);
                     var text = "<option value='0'>--</option>";
                     for (var i = 0; i < jsonObj.pets.length; i++) {
-                       text = text + "<option value = '" + jsonObj.pets[i].name + "'>" + jsonObj.pets[i].lname + "</option>";
+                       text = text + "<option value = '" + i + "'>" + jsonObj.pets[i].name + " " + jsonObj.pets.[i].lname + "</option>";
                     }
                     document.getElementById("PetSel").innerHTML = text;
                 }
