@@ -102,9 +102,9 @@
                            }
                         }
                        // console.log(selection + "Using my code");
-                        document.getElementById("booklist").innerHTML = "";
-                        document.getElementById("Title").innerHTML = Title;
-                        document.getElementById("Author").innerHTML = Author;
+                        document.getElementById("First Name").innerHTML = "";
+                        document.getElementById("Last Name").innerHTML = Title;
+                        document.getElementById("Relation").innerHTML = Author;
                     }
                 }
                 http_request.open("GET", data_file, true);
@@ -125,8 +125,8 @@
         <br>
         <table class="src" >
             <tr>
-                <th>Title</th>
-                <th>Author</th>
+                <th>First Name</th>
+                <th>Last Name</th>
             </tr>
             <tr>
                 <td><div id="First Name">None Selected</div></td>
@@ -167,7 +167,7 @@
                     for (var i = 0; i < jsonObj.pets.length; i++) {
                        text = text + "<option value = '" + jsonObj.pets[i].first + "'>" + jsonObj.pets[i].last + "</option>";
                     }
-                    document.getElementById("BookSel").innerHTML = text;
+                    document.getElementById("booklist").innerHTML = text;
                 }
             }
             http_request.open("GET", data_file, true);
