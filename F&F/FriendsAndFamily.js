@@ -79,11 +79,11 @@ function wrtJSON() {
             var itemsInList = "";
             for(var i = 0; i< pets.length; i++){
 
-              if(){//has name add
+              if(true){//has name add
 
-              }else if () {//has last name add
+              }else if (true) {//has last name add
 
-              }else if(){//has relationship add
+              }else if(true){//has relationship add
 
               }
 
