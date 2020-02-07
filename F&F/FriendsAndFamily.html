@@ -38,7 +38,7 @@
                         var First = "";
                         var Last = "";
                         var Relation = "";
-
+                        //off by 1
                         var selectedIndex = document.getElementById("PetSel").value - 1;
                         if(selectedIndex > 0 && selectedIndex < jsonObj.pets.length){
                             var pet = jsonObj.pets[selectedIndex];
@@ -147,6 +147,7 @@
                     var text = "<option value='0'>--</option>";
                     var pets = jsonObj.pets;
                     for (var i = 0; i < pets.length ; i++) {
+                      //off by 1
                         var valueIndex = i + 1
                        text = text + "<option value = '" + valueIndex + "'>" + pets[i].name + " " + pets[i].lname + "</option>";
                     }
