@@ -77,9 +77,11 @@ function wrtJSON() {
             var relationInputText = document.getElementById("RelationInput").value
             var nameInputText = document.getElementById("NameInput").value
 
+            console.log(relationInputText);
+            console.log(nameInputText);
             if(relationInputText.value == "" && nameInputText.value == ""){
               document.getElementById("Searchable").innerHTML = "";
-              return
+              return;
             }
 
             var pets = jsonObj.pets
