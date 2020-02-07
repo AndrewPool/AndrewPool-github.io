@@ -90,11 +90,11 @@ function wrtJSON() {
 
             for(var i = 0; i< pets.length; i++){
               var pet = pets[i];
-              if(pet.name.indexOf(relationInputText) && nameInputText != ""){//has name add
+              if(pet.name.indexOf(relationInputText)>-1 && nameInputText != ""){//has name add
                   itemsInList += contentForEntry(pet);
-              }else if (pet.lname.indexOf(relationInputText) && nameInputText != "") {//has last name add
+              }else if (pet.lname.indexOf(relationInputText)>-1  && nameInputText != "") {//has last name add
                   itemsInList += contentForEntry(pet);
-              }else if(pet.relation.indexOf(relationInputText) && relationInputText != ""){//has relationship add
+              }else if(pet.relation.indexOf(relationInputText)>-1  && relationInputText != ""){//has relationship add
                   itemsInList += contentForEntry(pet);
               }
 
