@@ -77,8 +77,8 @@ function wrtJSON() {
             var relationInputText = document.getElementById("RelationInput").value
             var nameInputText = document.getElementById("NameInput").value
 
-            console.log(relationInputText);
-            console.log(nameInputText);
+            console.log(relationInputText + " rel");
+            console.log(nameInputText + "name");
             if(relationInputText.value == "" && nameInputText.value == ""){
               document.getElementById("Searchable").innerHTML = "";
               return;
