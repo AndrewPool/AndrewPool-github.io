@@ -27,6 +27,7 @@
                         }
                     }
                 }
+                //TODO
                 http_request.onreadystatechange = function () {
                     if (http_request.readyState == 4) {
                         // Javascript function JSON.parse to parse JSON data
@@ -37,19 +38,7 @@
                         var First = "";
                         var Last = "";
                         var Relation = "";
-                        for (var i = 0; i < jsonObj.pets.length; i++) {
-                            if(jsonObj.book[i].relation == document.getElementById("PetSel").value &&
-                            	document.getElementById("BookSel").value != 0)
-                            	{
-                            	var pet = jsonObj.pets[i];
-                            	First = First + pet.name + "<br>";
-                            	Last = Last + pet.lname + "<br>";
-                            	//extra = extra + pet.Year + "<p>" + pet.Description + "</p>";
 
-                            	}
-                        }
-                        //console.log(selection + "using my code");
-                        //document.getElementById("booklist").innerHTML = extra;
                         document.getElementById("First Name").innerHTML = First;
                         document.getElementById("Last Name").innerHTML = Last;
                     }
@@ -81,37 +70,20 @@
                         }
                     }
                 }
+                ///TODO
                 http_request.onreadystatechange = function () {
                     if (http_request.readyState == 4) {
                         // Javascript function JSON.parse to parse JSON data
                         var jsonObj = JSON.parse(http_request.responseText);
 
-                        // jsonObj variable now contains the data structure and can
-                        // be accessed as jsonObj.name and jsonObj.country.
-                        var First = "";
-                        var Last = "";
-                        var Relation = "";
-                        for (var i = 0; i < jsonObj.book.length; i++) {
-                           if(jsonObj.pets[i].Author.indexOf(document.getElementById("Relation").value) > -1 && document.getElementById("Relation").value != ""){
 
-                           First = First + jsonObj.pets[i].name + "<br>";
-                           Last = Author + jsonObj.pets[i].lname + "<br>";
-
-
-
-                           }
-                        }
-                       // console.log(selection + "Using my code");
-                        document.getElementById("First Name").innerHTML = First;
-                        document.getElementById("Last Name").innerHTML = Last;
-                        document.getElementById("Relation").innerHTML = Relation;
                     }
                 }
                 http_request.open("GET", data_file, true);
                 http_request.send();
             }
         </script>
-        <title>JSON Using AJAX</title>
+        <title>Friends and Family</title>
     </head>
     <body>
         <h1>Fluffies, Fuzzies, Fur Buddies, and a Fish</h1>
