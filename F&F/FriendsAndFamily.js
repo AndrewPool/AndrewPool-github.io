@@ -72,6 +72,8 @@ function wrtJSON() {
 
             var jsonObj = JSON.parse(http_request.responseText);
 
+            var inputText = document.getElementById("RelationInput").value
+
 
 
         }
