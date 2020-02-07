@@ -1,0 +1,31 @@
+{
+    "people":[{"name":"Peter",
+        "lname":"Pool",
+            "relation":"Cat"
+        },
+        {"name":"Julie",
+        "lname":"Pool",
+            "relation":"Cat"
+        },
+        {"name":"Bristlenose",
+        "lname":"Plecos",
+            "relation":"Pool Cleaner"
+        },
+        {"name":"Mary",
+        "lname":"Pebbles",
+            "relation":"Cat"
+        },
+        {"name":"Oscar",
+        "lname":"Buddy",
+            "relation":"Cat"
+        },
+        {"name":"Zaria",
+        "lname":"Princess",
+            "relation":"Cat"
+        },
+        {"name":"Renee",
+        "lname":"Pool",
+            "relation":"Missy-Fluffykins"
+        },
+        ]
+}
