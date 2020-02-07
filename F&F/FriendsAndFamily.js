@@ -35,6 +35,14 @@ http_request.onreadystatechange = function () {
 http_request.open("GET", data_file, true);
 http_request.send();
 }
+
+
+///_________---------------------------------------------------------------------
+
+
+
+
+
 function wrtJSON() {
 
     var data_file = "FriendsAndFamily.json";
@@ -71,6 +79,15 @@ function wrtJSON() {
     http_request.open("GET", data_file, true);
     http_request.send();
 }
+
+
+
+///_________---------------------------------------------------------------------
+
+
+
+
+
 function drpJSON() {
 //i hope it's ok that i copy pasted this.
 //this is needed to access other files?
