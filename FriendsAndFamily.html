@@ -38,7 +38,7 @@
                         var Last = "";
                         var Relation = "";
                         for (var i = 0; i < jsonObj.pets.length; i++) {
-                            if(jsonObj.book[i].relation == document.getElementById("BookSel").value &&
+                            if(jsonObj.book[i].relation == document.getElementById("PetSel").value &&
                             	document.getElementById("BookSel").value != 0)
                             	{
                             	var pet = jsonObj.pets[i];
@@ -88,23 +88,23 @@
 
                         // jsonObj variable now contains the data structure and can
                         // be accessed as jsonObj.name and jsonObj.country.
-                        var Title = "";
-                        var Author = "";
-
+                        var First = "";
+                        var Last = "";
+                        var Relation = "";
                         for (var i = 0; i < jsonObj.book.length; i++) {
-                           if(jsonObj.book[i].Author.indexOf(document.getElementById("AuthorName").value) > -1 && document.getElementById("AuthorName").value != ""){
+                           if(jsonObj.pets[i].Author.indexOf(document.getElementById("Relation").value) > -1 && document.getElementById("Relation").value != ""){
 
-                           Title = Title + jsonObj.book[i].Title + "<br>";
-                           Author = Author + jsonObj.book[i].Author + "<br>";
+                           First = First + jsonObj.pets[i].name + "<br>";
+                           Last = Author + jsonObj.pets[i].lname + "<br>";
 
 
 
                            }
                         }
                        // console.log(selection + "Using my code");
-                        document.getElementById("First Name").innerHTML = "";
-                        document.getElementById("Last Name").innerHTML = Title;
-                        document.getElementById("Relation").innerHTML = Author;
+                        document.getElementById("First Name").innerHTML = First;
+                        document.getElementById("Last Name").innerHTML = Last;
+                        document.getElementById("Relation").innerHTML = Relation;
                     }
                 }
                 http_request.open("GET", data_file, true);
@@ -119,7 +119,7 @@
             <select id='PetSel' onchange ="drpJSON()">
 
             </select>
-            Or Enter a Name: <input type="text" name="AuthorName" id="AuthorName" onkeyup ="wrtJSON()">
+            Or Enter a Relation: <input type="text" name="Relation" id="Relation" onkeyup ="wrtJSON()">
             <input type="button" onclick="wrtJSON()" value="Pick">
         </div>
         <br>
@@ -133,7 +133,7 @@
                 <td><div id="Last Name">None Selected</div></td>
             </tr>
             <tr>
-                <td><div id="booklist">some books</div></td>
+                <td><div id="petlist">some pets</div></td>
                 <td></td>
             </tr>
         </table>
