@@ -128,7 +128,7 @@ function drpJSON() {
                 var pet = jsonObj.pets[selectedIndex];
                 First = pet.name;
                 Last = pet.lname;
-                Relation = pet.relation;
+                Relation = Relation + pet.relation;
             }
 
             document.getElementById("First Name").innerHTML = First;
