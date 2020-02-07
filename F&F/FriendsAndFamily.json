@@ -1,27 +1,27 @@
 {
     "pets":[{"name":"Peter",
         "lname":"Pool",
-            "relation":"Cat"
+            "relation":"Fur Buddy"
         },
         {"name":"Julie",
         "lname":"Pool",
-            "relation":"Cat"
+            "relation":"Fur Buddy"
         },
         {"name":"Bristlenose",
         "lname":"Plecos",
-            "relation":"Pool Cleaner"
+            "relation":"Fish"
         },
         {"name":"Mary",
         "lname":"Pebbles",
-            "relation":"Cat"
+            "relation":"Fuzzy"
         },
         {"name":"Oscar",
         "lname":"Buddy",
-            "relation":"Cat"
+            "relation":"Fur Buddy"
         },
         {"name":"Zaria",
         "lname":"Princess",
-            "relation":"Cat"
+            "relation":"Fur Buddy"
         },
         {"name":"Renee",
         "lname":"Pool",

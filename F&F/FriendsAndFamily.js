@@ -72,10 +72,24 @@ function wrtJSON() {
 
             var jsonObj = JSON.parse(http_request.responseText);
 
-            var inputText = document.getElementById("RelationInput").value
+            var relationInputText = document.getElementById("RelationInput").value
+            var nameInputText = document.getElementById("NameInput").value
+            var pets = jsonObj.pets
+
+            var itemsInList = "";
+            for(var i = 0; i< pets.length; i++){
+
+              if(){//has name add
+
+              }else if () {//has last name add
+
+              }else if(){//has relationship add
+
+              }
 
 
-
+            }
+            document.getElementById("Searchable").innerHTML = "<td>1</td><td>2</td><td>3</td>"
         }
     }
     http_request.open("GET", data_file, true);
