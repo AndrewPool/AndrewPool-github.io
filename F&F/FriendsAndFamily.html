@@ -137,7 +137,7 @@
                     var jsonObj = JSON.parse(http_request.responseText);
                     var text = "<option value='0'>--</option>";
                     for (var i = 0; i < jsonObj.pets.length; i++) {
-                       text = text + "<option value = '" + jsonObj.pets[i].first + "'>" + jsonObj.pets[i].last + "</option>";
+                       text = text + "<option value = '" + jsonObj.pets[i].name + "'>" + jsonObj.pets[i].lname + "</option>";
                     }
                     document.getElementById("PetSel").innerHTML = text;
                 }
