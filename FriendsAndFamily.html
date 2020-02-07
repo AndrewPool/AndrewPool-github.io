@@ -37,21 +37,21 @@
                         var First = "";
                         var Last = "";
                         var Relation = "";
-                        for (var i = 0; i < jsonObj.book.length; i++) {
-                            if(jsonObj.book[i].id == document.getElementById("BookSel").value &&
+                        for (var i = 0; i < jsonObj.pets.length; i++) {
+                            if(jsonObj.book[i].relation == document.getElementById("BookSel").value &&
                             	document.getElementById("BookSel").value != 0)
                             	{
-                            	var book = jsonObj.book[i];
-                            	Title = Title + book.Title + "<br>";
-                            	Author = Author + book.Author + "<br>";
-                            	extra = extra + book.Year + "<p>" + book.Description + "</p>";
+                            	var pet = jsonObj.pets[i];
+                            	First = First + pet.name + "<br>";
+                            	Last = Last + pet.lname + "<br>";
+                            	//extra = extra + pet.Year + "<p>" + pet.Description + "</p>";
 
                             	}
                         }
                         //console.log(selection + "using my code");
-                        document.getElementById("booklist").innerHTML = extra;
-                        document.getElementById("Title").innerHTML = Title;
-                        document.getElementById("Author").innerHTML = Author;
+                        //document.getElementById("booklist").innerHTML = extra;
+                        document.getElementById("First Name").innerHTML = First;
+                        document.getElementById("Last Name").innerHTML = Last;
                     }
                 }
                 http_request.open("GET", data_file, true);
@@ -116,7 +116,7 @@
     <body>
         <h1>Fluffies, Fuzzies, Fur Buddies, and a Fish</h1>
         <div class="central">Select a pet:
-            <select id='BookSel' onchange ="drpJSON()">
+            <select id='PetSel' onchange ="drpJSON()">
 
             </select>
             Or Enter a Name: <input type="text" name="AuthorName" id="AuthorName" onkeyup ="wrtJSON()">
@@ -167,7 +167,7 @@
                     for (var i = 0; i < jsonObj.pets.length; i++) {
                        text = text + "<option value = '" + jsonObj.pets[i].first + "'>" + jsonObj.pets[i].last + "</option>";
                     }
-                    document.getElementById("booklist").innerHTML = text;
+                    document.getElementById("PetSel").innerHTML = text;
                 }
             }
             http_request.open("GET", data_file, true);
