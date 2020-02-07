@@ -70,22 +70,30 @@ function wrtJSON() {
     http_request.onreadystatechange = function () {
         if (http_request.readyState == 4) {
 
+
+
             var jsonObj = JSON.parse(http_request.responseText);
 
             var relationInputText = document.getElementById("RelationInput").value
             var nameInputText = document.getElementById("NameInput").value
+
+            if(relationInputText.value == "" && nameInputText.value == ""){
+              document.getElementById("Searchable").innerHTML = "";
+              return
+            }
+
             var pets = jsonObj.pets
 
             var itemsInList = "<tr><th>First Name</th><th>Last Name</th><th>Relation</th></tr>";
 
             for(var i = 0; i< pets.length; i++){
-
-              if(true){//has name add
-
-              }else if (true) {//has last name add
-
-              }else if(true){//has relationship add
-
+              var pet = pets[i];
+              if(pet.name.indexOf(relationInputText) && nameInputText != ""){//has name add
+                  itemsInList += contentForEntry(pet);
+              }else if (pet.lname.indexOf(relationInputText) && nameInputText != "") {//has last name add
+                  itemsInList += contentForEntry(pet);
+              }else if(pet.relation.indexOf(relationInputText) && relationInputText != ""){//has relationship add
+                  itemsInList += contentForEntry(pet);
               }
 
 
@@ -97,7 +105,9 @@ function wrtJSON() {
     http_request.send();
 }
 
+function contentForEntry(pet){
 
+}
 
 ///_________---------------------------------------------------------------------
 
