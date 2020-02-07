@@ -76,7 +76,7 @@ function wrtJSON() {
             var nameInputText = document.getElementById("NameInput").value
             var pets = jsonObj.pets
 
-            var itemsInList = "";
+            var itemsInList = "<tr><th>First Name</th><th>Last Name</th><th>Relation</th></tr>";
             for(var i = 0; i< pets.length; i++){
 
               if(true){//has name add
