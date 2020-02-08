@@ -203,7 +203,7 @@ function drpJSON() {
             var Relation = "";
             //off by 1
             var selectedIndex = document.getElementById("PetSel").value - 1;
-            if(selectedIndex > 0 && selectedIndex < jsonObj.pets.length){
+            if(selectedIndex > -1 && selectedIndex < jsonObj.pets.length){
                 var pet = jsonObj.pets[selectedIndex];
                 First = pet.name;
                 Last = pet.lname;
