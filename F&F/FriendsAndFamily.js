@@ -74,8 +74,8 @@ function wrtJSON() {
 
             var jsonObj = JSON.parse(http_request.responseText);
 
-            var relationInputText = document.getElementById("RelationInput").value
-            var nameInputText = document.getElementById("NameInput").value
+            var relationInputText = document.getElementById("RelationInput").value.toLowerCase();
+            var nameInputText = document.getElementById("NameInput").value.toLowerCase();
 
             console.log(relationInputText + " rel");
             console.log(nameInputText + "name");
@@ -90,11 +90,11 @@ function wrtJSON() {
 
             for(var i = 0; i< pets.length; i++){
               var pet = pets[i];
-              if(pet.name.indexOf(relationInputText)>-1 && nameInputText != ""){//has name add
+              if(pet.name.toLowerCase().indexOf(relationInputText)>-1 && nameInputText != ""){//has name add
                   itemsInList += contentForEntry(pet);
-              }else if (pet.lname.indexOf(relationInputText)>-1  && nameInputText != "") {//has last name add
+              }else if (pet.lname.toLowerCase().indexOf(relationInputText)>-1  && nameInputText != "") {//has last name add
                   itemsInList += contentForEntry(pet);
-              }else if(pet.relation.indexOf(relationInputText)>-1  && relationInputText != ""){//has relationship add
+              }else if(pet.relation.toLowerCase().indexOf(relationInputText)>-1  && relationInputText != ""){//has relationship add
                   itemsInList += contentForEntry(pet);
               }
 
