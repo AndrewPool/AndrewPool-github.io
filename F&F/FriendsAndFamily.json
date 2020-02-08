@@ -26,6 +26,10 @@
         {"name":"Renee",
         "lname":"Pool",
             "relation":"Missy-Fluffykins"
+        },
+        {"name":"Daisy",
+        "lname":"Monster",
+            "relation":"Tabby Buddy"
         }
         ]
 }
