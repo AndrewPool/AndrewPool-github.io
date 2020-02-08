@@ -163,7 +163,7 @@ function displayAll(){
   http_request.open("GET", data_file, true);
   http_request.send();
 }
-}
+
 
 
 
