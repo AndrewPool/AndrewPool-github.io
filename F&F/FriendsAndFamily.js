@@ -90,9 +90,9 @@ function wrtJSON() {
 
             for(var i = 0; i< pets.length; i++){
               var pet = pets[i];
-              if(pet.name.toLowerCase().indexOf(relationInputText)>-1 && nameInputText != "" && pet.relation.toLowerCase().indexOf(relationInputText)>-1){//has name and relation add
+              if(pet.name.toLowerCase().indexOf(relationInputText)>-1 && nameInputText != "" && (pet.relation.toLowerCase().indexOf(relationInputText)>-1 || relationInputText == "")){//has name and relation add
                   itemsInList += contentForEntry(pet);
-              }else if (pet.lname.toLowerCase().indexOf(relationInputText)>-1  && nameInputText != "" && pet.relation.toLowerCase().indexOf(relationInputText)>-1) {//has last name relation add
+              }else if (pet.lname.toLowerCase().indexOf(relationInputText)>-1  && nameInputText != "" && (pet.relation.toLowerCase().indexOf(relationInputText)>-1 || relationInputText == "")) {//has last name relation add
                   itemsInList += contentForEntry(pet);
               }else if(pet.relation.toLowerCase().indexOf(relationInputText)>-1  && relationInputText != ""){//has relationship add
                   itemsInList += contentForEntry(pet);
