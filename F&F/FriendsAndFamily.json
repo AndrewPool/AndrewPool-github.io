@@ -1,5 +1,6 @@
 {
-    "pets":[{"name":"Peter",
+    "pets":[
+        {"name":"Peter",
         "lname":"Pool",
             "relation":"Fur Buddy"
         },
