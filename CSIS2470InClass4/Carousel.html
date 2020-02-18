@@ -19,7 +19,7 @@
           html += '<div class="books">';
           html += '<h2 id="title">' + stuff.Title + '<h2>';
           html += '<h4>' + stuff.Author + '</h4>';
-          html += '<p onclick="bookinfo(1)"><img src="'+ stuff.Source +'" ></img></p></div>';
+          html += '<p onclick="bookinfo('+stuff.id+')"><img src="'+ stuff.Source +'" ></img></p></div>';
         });
       });
       $('#books').html(html);
@@ -45,11 +45,11 @@
 </head>
 <body>
   <h1>Stuff</h1>
-  <div id="books">books id or whatever</div>
-
-
+  <p><div id="books">books id or whatever</div>
+</p>
+<p>
   <div id="information">information id or whatever</div>
-
+</p>
 
 </body>
 
