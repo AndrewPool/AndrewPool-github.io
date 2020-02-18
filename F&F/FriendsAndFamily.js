@@ -1,4 +1,5 @@
-function start(){var data_file = "FriendsAndFamily.json";
+function start(){
+  var data_file = "FriendsAndFamily.json";
 var http_request = new XMLHttpRequest();
 
 try {
