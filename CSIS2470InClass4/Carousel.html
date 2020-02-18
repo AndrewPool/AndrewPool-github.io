@@ -11,7 +11,7 @@
 
   $(document).ready(function(){
     console.log("ready");
-    $.getJSON('products.json', function(data)){
+    $.getJSON('products.json', function(data){
       console.log(data);
       $.each(data, function(key, value){
         $.each(value, function(index, stuff){
@@ -31,10 +31,10 @@
         next: '#next',
         speed: 500,
         timeout: 10000
-      })
+      });
 
-    })
-  })
+    });
+  });
 
   document.getElementById("test").innerHTML = html;
   </script>
@@ -47,9 +47,7 @@
   <h1>Stuff</h1>
   <div id="test">test id or whatever</div>
 
-  <script>
-    ready();
-  </script>
+
 </body>
 
 </html>
