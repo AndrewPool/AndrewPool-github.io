@@ -7,7 +7,7 @@
 
 function bookinfo(t) {
     console.log(t);
-    var data_file = "BookList.json";
+    var data_file = "products.json";
     var http_request = new XMLHttpRequest();
 
     try {
