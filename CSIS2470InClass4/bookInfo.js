@@ -32,7 +32,7 @@ function bookinfo(t) {
         if (http_request.readyState == 4) {
             // Javascript function JSON.parse to parse JSON data
             var jsonObj = JSON.parse(http_request.responseText);
-
+            console.log(jsonObj);
             // jsonObj variable now contains the data structure and can
             // be accessed as jsonObj.name and jsonObj.country.
             var text = "";
