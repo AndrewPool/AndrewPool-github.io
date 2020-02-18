@@ -11,7 +11,7 @@
 
   $(document).ready(function(){
     console.log("ready");
-    $.getJSON('BookList.json', function(data)){
+    $.getJSON('products.json', function(data)){
       console.log(data);
       $.each(data, function(key, value){
         $.each(value, function(index, stuff){
