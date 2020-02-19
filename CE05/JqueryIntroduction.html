@@ -1,0 +1,39 @@
+<!DOCTYPE html><html>
+<head>
+  <script src="js/jquery.js></script>
+  
+  <script src="js/jquery-ui.min.js"></script>
+  
+  <script>
+    $(document).ready(function(){
+    
+    $('span.pq').each(function(){
+    
+      var quote=$(this).clone();//this is the span
+      
+      quote.removeClass('pq');
+      
+      quote.addClass('pullquote');
+      
+      $(this).before(quote);// this is still span?
+      
+        
+      
+    
+      });// end each span.pq
+    
+    
+    
+    });//end ready
+  </script>
+  
+</head>
+<body>
+  <h1>2470CE05</h1>
+  <div id="test">test id</div>
+  
+  <div id="span.pq"></div>
+
+</body>
+
+</html>
