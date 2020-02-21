@@ -1,11 +1,30 @@
 <!DOCTYPE html><html>
 <head>
-  <script src="js/jquery.js></script>
+  <script src="js/jquery.js"></script>
   
   <script src="js/jquery-ui.min.js"></script>
   
   <script>
     $(document).ready(function(){
+    
+    
+    $('#dashboard').hover(
+        function(){
+          $(this).animate(
+            {
+              left: '0',
+              backgroundColor: 'rgb(27,45,94)'
+            }
+          )
+        
+        },
+        function(){
+        
+        
+        }
+    
+    );//end hover
+    
     
     $('span.pq').each(function(){
     
@@ -17,10 +36,29 @@
       
       $(this).before(quote);// this is still span?
       
-        
+          
       
     
       });// end each span.pq
+    
+    $('.answer').hide();
+    $('.main h2').click(function(){
+      
+      var $answer = $(this).next('.answer');
+      
+      if($answer.is(':hidden')){
+      
+        $answer.slideDown();
+        $(this).addClass('close');
+      
+      } else {
+        $answer.fadeOut();
+        $(this).removeClass('close');
+      
+      }
+    
+    
+    }); //end click
     
     
     
