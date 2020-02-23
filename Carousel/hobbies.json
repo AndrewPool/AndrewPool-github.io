@@ -12,12 +12,13 @@
     "imagePath":"tele.jpeg",
     "description":"I like to ski outside."
   },
+
     {
         "id":2,
         "name":"band",
         "imagePath":"band.jpeg",
         "description":"I like to play ina Band."
-      },
+      }
 
   ]
 }
