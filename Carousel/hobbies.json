@@ -7,14 +7,32 @@
     },
     {
       "id":1,
-      "name":"skiing",
+      "name":"Skiing",
       "imagePath":"tele.jpeg",
       "description":"I like to ski outside."
     },
     {
       "id":2,
-      "name":"band",
+      "name":"Band",
       "imagePath":"band.jpeg",
       "description":"I like to play ina Band."
-      }]
+      },
+      {
+        "id":3,
+        "name":"Baking",
+        "imagePath":"baking.jpeg",
+        "description":"I like to bake a cake."
+        },
+        {
+          "id":4,
+          "name":"Frolfin'",
+          "imagePath":"frolf.jpeg",
+          "description":"I like to throw discs."
+          },
+          {
+            "id":5,
+            "name":"Cooking",
+            "imagePath":"cooking.jpeg",
+            "description":"I like to cook."
+            }]
 }
