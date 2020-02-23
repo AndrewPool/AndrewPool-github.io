@@ -1,0 +1,8 @@
+{
+  "hobby" : [{
+    "id":1,
+    "name":"skiing",
+    "imagePath":"img/tele.jpeg",
+    "description":"I like to ski outside."
+    }]
+}
