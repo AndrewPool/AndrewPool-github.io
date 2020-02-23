@@ -8,31 +8,31 @@
     {
       "id":1,
       "name":"Skiing",
-      "imagePath":"tele.jpeg",
+      "imagePath":"tele.png",
       "description":"I like to ski outside."
     },
     {
       "id":2,
       "name":"Band",
-      "imagePath":"band.jpeg",
+      "imagePath":"band.png",
       "description":"I like to play ina Band."
       },
       {
         "id":3,
         "name":"Baking",
-        "imagePath":"baking.jpeg",
+        "imagePath":"baking.png",
         "description":"I like to bake a cake."
         },
         {
           "id":4,
           "name":"Frolfin'",
-          "imagePath":"frolf.jpeg",
+          "imagePath":"frolf.png",
           "description":"I like to throw discs."
           },
           {
             "id":5,
             "name":"Cooking",
-            "imagePath":"cooking.jpeg",
+            "imagePath":"cooking.png",
             "description":"I like to cook."
             }]
 }
