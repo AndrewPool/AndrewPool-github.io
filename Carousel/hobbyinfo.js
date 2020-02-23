@@ -32,7 +32,7 @@ function hobbyinfo(t) {
             var text = "";
             for (var i = 0; i < jsonObj.hobby.length; i++) {
                 if (jsonObj.hobby[i].id == t) {
-                    text = text + jsonObj.book[i].name + ":" + jsonObj.book[i].description;
+                    text = text + jsonObj.hobby[i].name + ":" + jsonObj.hobby[i].description;
                     var selection = i;
                 }
 
