@@ -1,24 +1,20 @@
 {
   "hobby" : [{
-
       "id":0,
       "name":"Kerbal",
       "imagePath":"kerbal.png",
       "description":"I like to play Kerbal."
     },
     {
-    "id":1,
-    "name":"skiing",
-    "imagePath":"tele.jpeg",
-    "description":"I like to ski outside."
-  },
-
+      "id":1,
+      "name":"skiing",
+      "imagePath":"tele.jpeg",
+      "description":"I like to ski outside."
+    },
     {
-        "id":2,
-        "name":"band",
-        "imagePath":"band.jpeg",
-        "description":"I like to play ina Band."
-      }
-
-  ]
+      "id":2,
+      "name":"band",
+      "imagePath":"band.jpeg",
+      "description":"I like to play ina Band."
+      }]
 }

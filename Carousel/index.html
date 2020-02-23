@@ -14,7 +14,7 @@
       console.log(data);
       $.each(data, function(key, value){
         $.each(value, function(index, stuff){
-      //    console.log(index +" "+ stuff.Author);
+          console.log(index +" "+ stuff.name);
           html += '<div class="hobby">';
           html += '<h2 id="name">' + stuff.name + '<h2>';
           html += '<h4>' + stuff.description + '</h4>';
@@ -38,7 +38,6 @@
   //document.getElementById("test").innerHTML = html;
   </script>
   <style>
-
 
     </style>
 
