@@ -18,7 +18,7 @@
           html += '<div class="hobby">';
           html += '<h2 id="name">' + stuff.name + '<h2>';
           html += '<h4>' + stuff.description + '</h4>';
-          html += '<p onclick="hobbyinfo('+stuff.id+')"><img src=img/"'+ stuff.imagePath.replace(/%22/g, "") +'" ></img></p></div>';
+          html += '<p onclick="hobbyinfo('+stuff.id+')"><img src=img/"'+stuff.imagePath+'" ></img></p></div>';
         });
       });
       $('#hobby').html(html);
@@ -38,15 +38,19 @@
   //document.getElementById("test").innerHTML = html;
   </script>
   <style>
-
+ .section{
+   padding: 50px;
+   margin: 50px;
+ }
     </style>
+
 
 
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
   <h1>Stuff</h1>
-  <p><div id="hobby">hobby id or whatever</div>
+  <p><div id="hobby" class="section">hobby id or whatever</div>
 </p>
 
 <br>
@@ -59,7 +63,7 @@
 <br>
 
 <p>
-  <div id="description">description id or whatever</div>
+  <div id="description" class="section">description id or whatever</div>
 </p>
 
 </body>
