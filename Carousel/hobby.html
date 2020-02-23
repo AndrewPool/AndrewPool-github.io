@@ -18,7 +18,7 @@
           html += '<div class="hobby">';
           html += '<h2 id="name">' + stuff.name + '<h2>';
           html += '<h4>' + stuff.description + '</h4>';
-          html += '<p onclick="hobbyinfo('+stuff.id+')"><img src=img/"'+ stuff.imagePath +'" ></img></p></div>';
+          html += '<p onclick="hobbyinfo('+stuff.id+')"><img src=img/"'+ stuff.imagePath.replace(/%22/g, "") +'" ></img></p></div>';
         });
       });
       $('#hobby').html(html);
