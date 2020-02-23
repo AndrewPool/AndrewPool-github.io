@@ -29,10 +29,10 @@ function hobbyinfo(t) {
             console.log(jsonObj);
             // jsonObj variable now contains the data structure and can
             // be accessed as jsonObj.name and jsonObj.country.
-            var text = "";
+            var text = "<p>";
             for (var i = 0; i < jsonObj.hobby.length; i++) {
                 if (jsonObj.hobby[i].id == t) {
-                    text = text + jsonObj.hobby[i].name + ":" + jsonObj.hobby[i].description;
+                    text = text + jsonObj.hobby[i].name + ":" + jsonObj.hobby[i].description+"</p>";
                     var selection = i;
                 }
 
