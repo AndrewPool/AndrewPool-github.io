@@ -1,0 +1,39 @@
+{
+  "hobby" : [{
+      "id":0,
+      "name":"Kerbal",
+      "imagePath":"img/kerbal.png",
+      "description":"I like to play Kerbal."
+    },
+    {
+      "id":1,
+      "name":"Skiing",
+      "imagePath":"img/tele.png",
+      "description":"I like to ski outside."
+    },
+    {
+      "id":2,
+      "name":"Band",
+      "imagePath":"img/band.png",
+      "description":"I like to play ina Band."
+      },
+      {
+        "id":3,
+        "name":"Baking",
+        "imagePath":"img/baking.png",
+        "description":"I like to bake a cake."
+        },
+        {
+          "id":4,
+          "name":"Frolfin'",
+          "imagePath":"img/frolf.png",
+          "description":"I like to throw discs."
+          },
+          {
+            "id":5,
+            "name":"Cooking",
+            "imagePath":"img/cooking.png",
+            "description":"I like to cook."
+            }]
+
+}

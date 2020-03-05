@@ -1,0 +1,74 @@
+<!DOCTYPE html><html>
+<head>
+  <script type = "text/javascript" src ="jquery.js"></script>
+  <script type="text/javascript" src="jquery-cycle-all.js"></script>
+    <script type = "text/javascript" src ="hobbyinfo.js"></script>
+  <script type="text/javascript">
+
+  var html = '';
+
+
+  $(document).ready(function(){
+    console.log("ready");
+    $.getJSON('hobbies.json', function(data){
+      console.log(data);
+      $.each(data, function(key, value){
+        $.each(value, function(index, stuff){
+          console.log(index +" "+ stuff.name);
+          html += '<div class="hobby">';
+          html += '<h2 id="name">' + stuff.name + '<h2>';
+        //  html += '<h4>' + stuff.description + '</h4>';
+          html += '<p onclick="hobbyinfo('+stuff.id+')"><img src="'+stuff.imagePath+'" ></img></p></div>';
+        });
+      });
+      $('#hobby').html(html);
+      //cycleH
+      $('#hobby').cycle({
+        fx:'fade',
+        pause: '1',
+        prev: '#prev',
+        next: '#next',
+        speed: 500,
+        timeout: 5000
+      });
+
+    });
+  });
+
+  //document.getElementById("test").innerHTML = html;
+  </script>
+  <style>
+ .section{
+   padding: 50px;
+   margin: 50px;
+ }
+ img{
+   height: auto;
+ }
+    </style>
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <h1>Fun Stuff</h1>
+  <p><div id="hobby" class="section">hobby id or whatever</div>
+</p>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<p>
+  <div id="description" class="section">description id or whatever</div>
+</p>
+
+</body>
+
+</html>
