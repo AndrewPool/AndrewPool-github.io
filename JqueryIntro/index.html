@@ -19,14 +19,20 @@ and open the template in the editor.
           //prepare the jquery stuff
             $(document).ready(function () {
               $("#Introduction").accordion();
+              $("#myform").on("submit", function(e){
+                event.preventDefault();
+                console.log("Submit information fired");
+                var text = "It's fantastic to meet you ";
+                var name = document.getElementById("name").value;
+                console.log(name);
+
+                
+              });//end on submit
             }); // end ready
 
             //handle the submit button
             function SubmitInformation(){
-              console.log("Submit information fired");
-              var text = "It's fantastic to meet you ";
-              var name = document.getElementById("name").value;
-              console.log(name);
+
             }
         </script>
 
@@ -34,7 +40,7 @@ and open the template in the editor.
     <body>
       <h1>Welcome!<h1>
         <h2>Tells me a little bit about yourself<h2>
-      <form onsubmit="return SubmitInformation()">
+      <form>
         <div id="Introduction">
           <h3>Personal<h3>
             <div>
