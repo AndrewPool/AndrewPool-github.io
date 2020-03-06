@@ -23,11 +23,14 @@ and open the template in the editor.
             }); // end ready
 
 
-
+            function SubmitInformation(){
+              console.log("Submit information fired");
+            }
         </script>
 
     </head>
     <body>
+      <form action="SubmitInformation()">
         <div id="Introduction">
           <h3>Personal<h3>
             <div>
@@ -68,5 +71,7 @@ and open the template in the editor.
                           </div>
 
         </div>
+        <input type="submit" value="Submit">
+        </form>
     </body>
 </html>
