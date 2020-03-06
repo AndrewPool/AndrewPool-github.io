@@ -27,67 +27,14 @@ and open the template in the editor.
         <script>
             $(document).ready(function () {
                 //add Tabs here
-                $('#tabContainer').tabs({
-                    show: 'fadeIn',
-                    hide: 'fadeOut'
-                });
-
-                var hash = location.hash;
-
-                if(hash){
-                    $('#tabContainer').tabs('load',hash)
-                };
-
+                
                 //Add Zombie here
-
-            $('#confirm').dialog({
-                modal: true,
-                autoOpen: false,
-
-                buttons:{
-                    "Confirm":function(){
-                        $('#zombie').effect('explode');
-                        $(this).dialog('close');
-                    },
-                    "Cancel":function(){
-                        $(this).dialog('close');
-                    }
-                }
-
-            });
-
-            $('#zombie').click(function(){
-                    $('#confirm').dialog('open');
-                }); //end zombie click
-
-
+                
                 //Add DOB picker here
-
-                $('#dob').datepicker({
-                    changeMonth : true,
-                    changeYear : true,
-                    yearRange : '-120:+0',
-                    maxDate : 0
-                    dateFormat : 'm-dd-yy'
-                });//end date picker
-
+                
                 //Add menus here
-                $('#menu').menu({
-                    position: {
-                        my: 'center top',
-                        at: 'center bottom'
-                    },
-                    icons: {
-                        submenu: 'ui-icon-triangle-1-s'
-                    }
-
-                }); // end menu
-
-
+                
             }); // end ready
-
-
-
         </script>
 
     </head>
@@ -116,7 +63,7 @@ and open the template in the editor.
                             <h1>A Birthday Picker</h1>
                             <form>
                                 <div>
-                                    <label for="dob" class="label">What is your birth date?</label>
+                                    <label for="dob" class="label">What's your birth date?</label>
                                     <input type="text" id="dob" name="birthdate">
                                 </div>
                             </form>
@@ -142,7 +89,7 @@ and open the template in the editor.
                                         </ul>
                                     </li>
                                 </ul>
-                            </div>
+                            </div>                            
                         </div>
                     </div>
                 </div>
