@@ -16,11 +16,12 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <script>
+          //prepare the jquery stuff
             $(document).ready(function () {
               $("#Introduction").accordion();
             }); // end ready
 
-
+            //handle the submit button
             function SubmitInformation(){
               console.log("Submit information fired");
               var text = "It's fantastic to meet you ";
@@ -70,7 +71,7 @@ and open the template in the editor.
                           </div>
 
         </div>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Post">
         </form>
         <h2>Greetings!<h2>
         <div id="Response">
