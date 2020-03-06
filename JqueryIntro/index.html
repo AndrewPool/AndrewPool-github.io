@@ -24,7 +24,20 @@ and open the template in the editor.
                 console.log("Submit information fired");
                 var text = "It's fantastic to meet you ";
                 var name = document.getElementById("name").value;
-                text = text + name;
+
+                text = text + name +". I too like ";
+                var music = document.getElementById("music").value;
+
+                text = text + music + ". I went to school at SLCC, but I'm sure "
+
+                var school = document.getElementById("school").value;
+
+                text = text + school + " is a great place too. Lets go do "
+
+                var hobby = document.getElementById("hobby").value;
+
+                text = text + hobby + " sometime!"
+
                 console.log(name);
 
                 $("#Response").html(text);
@@ -81,8 +94,8 @@ and open the template in the editor.
         <input type="submit" value="Post">
         </form>
         <h2>Greetings!<h2>
-        <div id="Response">
-          <p>I don't know enough about you yet</p>
+        <div>
+          <p id="Response">I don't know enough about you yet</p>
 
 
         </div><!--end response-->
