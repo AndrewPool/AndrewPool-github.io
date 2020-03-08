@@ -15,35 +15,20 @@ and open the template in the editor.
                 $('#Gallery a').click(function (evt) {
                   //disable default on click function that moves to a page with source of img
                     evt.preventDefault();
-                    //this is the #gallery object
-                    var imagePath = $(this).attr('href');
-                    var previousImage = $('#ship img');
-                    var nextImage = $('<img src="' + imagePath + '" width="800" height="750">');//it's kinda insane that this works
-                    nextImage.hide();
-                    $('#ship').prepend(nextImage);//add the string for the next image to the html in the ship tag
-                    nextImage.fadeIn(2000);//fade in action
-                    previousImage.fadeOut(2000, function() {//fade out action with completion handler
-                      $(this).remove();//removes object from innerHTML somehow, crazy
-                    }); //end fadeOut
                 }); // end click on ship
                 $('#gallery a:first').click();
 
                 $('#Gallery img').each(function () {
                     var imgFile = $(this).attr('src');
-                    var preloadImage = new Image();//new image object for the switch
-                    var imgExt = /(\.\w{3,4}$)/;//look at the blog, $means end(maybe...)this is img extension.
-                    preloadImage.src = imgFile.replace(imgExt, '_p$1');//use the blog to replace the image source with the new one $1 referse to the first arg?
-                    $(this).hover(//this is the gallery img
-                            function (){//this is called on hover
-                              $(this).attr('src', preloadImage.src);//sets img src to be the new image
-                            },
-                            function (){//this is called on end hover
-                              $(this).attr('src', imgFile);//sets img src to be old image
-                            }
-                            );  // end hover over image
+                    var preloadImage = new Image();
+                    var imgExt = /(\.\w{3,4}$)/;
+                    preloadImage.src = imgFile.replace(imgExt, '_p$1');
+                    $(this).hover(
+
+                            ); // end hover over image
                         }); // end each for roll over
                 $("#flip").click(function () {
-                  $("#panel").slideToggle("slow");
+
                 });
             });
 
