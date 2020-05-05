@@ -25,10 +25,11 @@ and open the template in the editor.
 
                     axis:"x,y",
                     grid:[200,200],
-
+                    stop: function(){
                     if($(this).sortable("toArray").join('')===answer){
                       alert('you won!');
                       $(this).sortable("disable");
+                    }
                   },
                   sort: coordinates
 
