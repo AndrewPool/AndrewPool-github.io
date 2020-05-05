@@ -34,7 +34,7 @@ and open the template in the editor.
 
                   format: "json"
                   };
-                  $.getJSON(ajaxURL, searchInfo, function(data){
+                  $.getJSON(URL, searchInfo, function(data){
 
                     $('h1').text(data.title);
                     var photoHTML = '';
@@ -43,7 +43,7 @@ and open the template in the editor.
 
                       photoHTML += '<span class="image">';
                       photoHTML += '<a href="' + photo.link + '">';
-                      photoHTML += '<img src="' + photo.media.m + '"></a></span>';
+                      photoHTML += '<img src="' + photo.media.m.replace('_m','_s') + '"></a></span>';
 
                     });//end each
 
