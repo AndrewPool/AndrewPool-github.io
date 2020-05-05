@@ -33,7 +33,7 @@ and open the template in the editor.
                   id : "22742217@N00",
 
                   format: "json"
-
+                  };
                   $.getJSON(ajaxURL, searchInfo, function(data){
 
                     $('h1').text(data.title);
@@ -50,8 +50,6 @@ and open the template in the editor.
                     $('#photos').append(photoHTML);
 
                   });//end get JSON
-
-                };
 
             }); // end ready
         </script>
