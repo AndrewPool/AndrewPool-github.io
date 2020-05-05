@@ -22,8 +22,15 @@ and open the template in the editor.
                 }
 
                 $('#gameContainer').sortable({
-                    
-                    
+
+                    axis:"x,y",
+                    grid:[200,200],
+
+                    if($(this).sortable("toArray").join('')===){
+                      alert('you won!');
+                      $(this).sortable("disable");
+                  }
+
                 });
 
             }); // end ready
@@ -56,9 +63,9 @@ and open the template in the editor.
                     <h1>Solve the picture puzzle</h1>
                     <div id="gameContainer">
                         <div id="p" class="piece"><img src="images/taj-mahalbigsplit/taj-mahalbig-3-3.jpeg" alt=""/></div>
-                        <div id="a" class="piece"><img src="images/taj-mahalbigsplit/taj-mahalbig-0-0.jpeg" alt=""/></div> 
+                        <div id="a" class="piece"><img src="images/taj-mahalbigsplit/taj-mahalbig-0-0.jpeg" alt=""/></div>
                         <div id="h" class="piece"><img src="images/taj-mahalbigsplit/taj-mahalbig-1-3.jpeg" alt=""/></div>
-                        <div id="b" class="piece"><img src="images/taj-mahalbigsplit/taj-mahalbig-0-1.jpeg" alt=""/></div>                        
+                        <div id="b" class="piece"><img src="images/taj-mahalbigsplit/taj-mahalbig-0-1.jpeg" alt=""/></div>
                         <div id="m" class="piece"><img src="images/taj-mahalbigsplit/taj-mahalbig-3-0.jpeg" alt=""/></div>
                         <div id="i" class="piece"><img src="images/taj-mahalbigsplit/taj-mahalbig-2-0.jpeg" alt=""/></div>
                         <div id="e" class="piece"><img src="images/taj-mahalbigsplit/taj-mahalbig-1-0.jpeg" alt=""/></div>
